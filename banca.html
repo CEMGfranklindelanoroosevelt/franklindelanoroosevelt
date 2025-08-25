@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banca y Finanzas</title>
+  <link rel="icon" href="imagenes/locopng.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7fc;
+      color: #1e1e1e;
+    }
+
+    header {
+      background-color: #a78bfa;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-header {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0f172a;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #c4b5fd;
+    }
+
+    nav a.activo {
+      background-color: #c4b5fd;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #a78bfa;
+        display: none;
+      }
+
+      nav.activo {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 20px;
+        border-top: 1px solid #c4b5fd;
+      }
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .lema {
+      text-align: center;
+      font-size: 32px;
+      color: #6d28d9;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: #444;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .imagen-intercalada {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 15px auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .imagen-intercalada:hover {
+      transform: scale(1.05);
+    }
+
+    .pagina h2 {
+      text-align: center;
+      color: #6d28d9;
+      margin: 40px 0 20px;
+      font-size: 24px;
+    }
+
+    .carreras-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .carrera-card {
+      background-color: #f3e8ff;
+      border-left: 4px solid #c084fc;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .carrera-card span {
+      font-weight: bold;
+      color: #6d28d9;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .btn-recorrido {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #a78bfa;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-recorrido:hover {
+      background-color: #6d28d9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="imagenes/locopng.png" alt="Logo del Colegio" class="logo-header" />
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="../index.html">Inicio</a>
+      <a href="presentacion.html">Campus</a>
+      <a href="carreras.html" class="activo">Carreras</a>
+      <a href="promo.html">Promoción 2025</a>
+      <a href="historia.html">Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="lema">Banca y Finanzas</h1>
+
+    <p class="intro">
+      Esta carrera prepara a los estudiantes para gestionar operaciones económicas en entidades bancarias, firmas financieras y organizaciones públicas o privadas. Su enfoque está en el manejo eficiente del capital, la evaluación de riesgos y la toma de decisiones que impulsen la estabilidad financiera.
+    </p>
+
+    <p class="intro">
+      A lo largo del programa, se abordan temas como interpretación de estados contables, administración de créditos, inversiones, seguros, mercados bursátiles y legislación financiera. Las clases se complementan con talleres, simulaciones y proyectos colaborativos que fortalecen el aprendizaje práctico.
+    </p>
+
+    <p class="intro">
+      Además de la formación técnica, se desarrollan habilidades blandas como liderazgo, pensamiento estratégico, ética profesional y comunicación efectiva. Los alumnos aprenden a enfrentar desafíos financieros complejos y a diseñar soluciones que generen impacto positivo.
+    </p>
+
+    <p class="intro">
+      La metodología incluye análisis de casos reales, simulaciones bancarias y experiencias en instituciones del sector, lo que permite que los egresados se integren rápidamente al mundo laboral con una visión clara y práctica.
+    </p>
+
+    <section class="pagina">
+      <h2>Oportunidades Profesionales</h2>
+      <div class="carreras-grid">
+        <div class="carrera-card">
+          <span>Especialista financiero</span>
+          <p>Analiza datos económicos y propone estrategias para mejorar el rendimiento.</p>
+        </div>
+        <div class="carrera-card">
+          <span>Ejecutivo bancario</span>
+          <p>Ofrece asesoría personalizada sobre productos financieros y servicios crediticios.</p>
+        </div>
+        <div class="carrera-card">
+          <span>Administrador de riesgos</span>
+          <p>Detecta amenazas financieras y diseña planes de mitigación en instituciones.</p>
+        </div>
+        <div class="carrera-card">
+          <span>Consultor en finanzas</span>
+          <p>Guía a empresas y emprendedores en decisiones de inversión y planificación.</p>
+        </div>
+        <div class="carrera-card">
+          <span>Emprendedor financiero</span>
+          <p>Desarrolla proyectos propios en el ámbito de asesoría y servicios económicos.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="text-align:center;">
+      <a href="carreras.html" class="btn-recorrido">← Volver a Carreras</a>
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('activo');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FDR - Contáctanos</title>
+  <link rel="icon" href="locopng.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7fc;
+      color: #1e1e1e;
+    }
+
+    header {
+      background-color: #a78bfa;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-header {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0f172a;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #c4b5fd;
+    }
+
+    nav a.activo {
+      background-color: #c4b5fd;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #a78bfa;
+        display: none;
+      }
+
+      nav.activo {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 20px;
+        border-top: 1px solid #c4b5fd;
+      }
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .lema {
+      text-align: center;
+      font-size: 32px;
+      color: #6d28d9;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .contacto-box {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-left: 4px solid #c084fc;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .contacto-box h2 {
+      font-size: 24px;
+      color: #6d28d9;
+      margin-bottom: 10px;
+    }
+
+    .contacto-box p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .contacto-box a {
+      color: #6d28d9;
+      text-decoration: underline;
+    }
+
+    .formulario {
+      margin-top: 30px;
+    }
+
+    .formulario h3 {
+      font-size: 20px;
+      color: #6d28d9;
+      margin-bottom: 10px;
+    }
+
+    .formulario form input,
+    .formulario form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .formulario form input[type="submit"] {
+      background-color: #a78bfa;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .formulario form input[type="submit"]:hover {
+      background-color: #6d28d9;
+    }
+
+    @media (max-width: 600px) {
+      .lema {
+        font-size: 24px;
+      }
+
+      .contacto-box h2 {
+        font-size: 20px;
+      }
+
+      .formulario h3 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="locopng.png" alt="Logo del Colegio" class="logo-header" />
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="index.html">Inicio</a>
+      <a href="presentacion.html">Campus</a>
+      <a href="carreras.html">Carreras</a>
+      <a href="promo.html">Promoción 2025</a>
+      <a href="historia.html">Historia</a>
+      <a href="contacto.html" class="activo">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="lema">Contáctanos - CEMG Franklin Delano Roosevelt</h1>
+
+    <section class="contacto-box">
+      <h2>Información de contacto</h2>
+      <p><strong>📞 Teléfono:</strong> +504 9521-5216</p>
+      <p><strong>📧 Correo:</strong> contacto@fdr.edu.hn</p>
+      <p><strong>📘 Facebook:</strong> <a href="https://facebook.com/fdrcolegio" target="_blank">facebook.com/fdrcolegio</a></p>
+
+      <div class="formulario">
+        <h3>Envíanos tu consulta</h3>
+        <form action="https://formspree.io/f/mgvzjdlk" method="POST">
+          <input type="text" name="nombre" placeholder="Tu nombre completo" required />
+          <input type="email" name="email" placeholder="Tu correo electrónico" required />
+          <textarea name="mensaje" rows="5" placeholder="Escribe tu duda o comentario aquí..." required></textarea>
+          <input type="submit" value="Enviar mensaje" />
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('activo');
+    }
+  </script>
+
+</body>
+</html>

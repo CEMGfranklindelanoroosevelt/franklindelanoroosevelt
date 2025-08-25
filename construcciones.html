@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Construcciones Metálicas</title>
+  <link rel="icon" href="imagenes/locopng.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7fc;
+      color: #1e1e1e;
+    }
+
+    header {
+      background-color: #a78bfa;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-header {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0f172a;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #c4b5fd;
+    }
+
+    nav a.activo {
+      background-color: #c4b5fd;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #a78bfa;
+        display: none;
+      }
+
+      nav.activo {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 20px;
+        border-top: 1px solid #c4b5fd;
+      }
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .lema {
+      text-align: center;
+      font-size: 32px;
+      color: #6d28d9;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: #444;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .imagen-intercalada {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 15px auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .imagen-intercalada:hover {
+      transform: scale(1.05);
+    }
+
+    .pagina h2 {
+      text-align: center;
+      color: #6d28d9;
+      margin: 40px 0 20px;
+      font-size: 24px;
+    }
+
+    .carreras-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .carrera-card {
+      background-color: #f3e8ff;
+      border-left: 4px solid #c084fc;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .carrera-card span {
+      font-weight: bold;
+      color: #6d28d9;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .btn-recorrido {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #a78bfa;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-recorrido:hover {
+      background-color: #6d28d9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="imagenes/locopng.png" alt="Logo del Colegio" class="logo-header" />
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="../index.html">Inicio</a>
+      <a href="presentacion.html">Campus</a>
+      <a href="carreras.html" class="activo">Carreras</a>
+      <a href="promo.html">Promoción 2025</a>
+      <a href="historia.html">Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="lema">Construcciones Metálicas</h1>
+
+    <p class="intro">
+      Esta especialidad brinda conocimientos técnicos en el diseño, armado y mantenimiento de estructuras metálicas. Los estudiantes aprenden a transformar materiales en soluciones funcionales, seguras y duraderas, aplicando procesos industriales en talleres equipados.
+    </p>
+
+    <p class="intro">
+      A lo largo del programa, se desarrollan habilidades en soldadura, corte, ensamblaje, lectura de planos, seguridad ocupacional y control de calidad. Los alumnos participan en proyectos reales dentro del colegio, como la fabricación de mobiliario escolar, fortaleciendo su experiencia práctica.
+    </p>
+
+    <p class="intro">
+      La formación también incluye gestión de materiales, planificación de tareas, liderazgo de equipos y supervisión de procesos. Se promueve la eficiencia, la precisión y el cumplimiento de estándares técnicos en cada etapa del trabajo.
+    </p>
+
+    <p class="intro">
+      Además, se desarrollan competencias blandas como creatividad, responsabilidad, trabajo colaborativo y resolución de problemas. Al finalizar, los egresados están preparados para integrarse a empresas del sector industrial, talleres especializados o emprender sus propios proyectos metalúrgicos.
+    </p>
+
+    <section class="pagina">
+      <h2>Oportunidades Profesionales</h2>
+      <div class="carreras-grid">
+        <div class="carrera-card">
+          <span>Especialista en estructuras metálicas</span>
+          <p>Diseña y construye componentes metálicos para obras civiles e industriales.</p>
+        </div>
+        <div class="carrera-card">
+          <span>Encargado de taller</span>
+          <p>Organiza equipos de trabajo y supervisa procesos de producción metalúrgica.</p>
+        </div>
+        <div class="carrera-card">
+          <span>Soldador certificado</span>
+          <p>Realiza uniones metálicas con precisión, aplicando normas de seguridad.</p>
+        </div>
+        <div class="carrera-card">
+          <span>Diseñador técnico</span>
+          <p>Elabora planos y modelos de mobiliario metálico funcional y estético.</p>
+        </div>
+        <div class="carrera-card">
+          <span>Emprendedor metalúrgico</span>
+          <p>Establece su propio taller de fabricación, reparación o diseño estructural.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="text-align:center;">
+      <a href="carreras.html" class="btn-recorrido">← Volver a Carreras</a>
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('activo');
+    }
+  </script>
+
+</body>
+</html>

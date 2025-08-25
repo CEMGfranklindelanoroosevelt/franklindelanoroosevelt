@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FDR - Oferta Académica</title>
+  <link rel="icon" href="locopng.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7fc;
+      color: #1e1e1e;
+    }
+
+    header {
+      background-color: #a78bfa;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-header {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0f172a;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #c4b5fd;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #a78bfa;
+        display: none;
+      }
+
+      nav.activo {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 20px;
+        border-top: 1px solid #c4b5fd;
+      }
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .lema {
+      text-align: center;
+      font-size: 36px;
+      color: #6d28d9;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .carreras-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .carrera-card {
+      background: linear-gradient(to bottom, #f3e8ff, #fafafa);
+      border: 2px solid #c084fc;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: #1e1e1e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .carrera-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .image-container {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      background-color: #ede9fe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carrera-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .carrera-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .placeholder-icon {
+      font-size: 50px;
+      color: #7c3aed;
+    }
+
+    .carrera-card span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #6d28d9;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .lema {
+        font-size: 24px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .carrera-card {
+        padding: 16px;
+      }
+
+      .image-container {
+        width: 90px;
+        height: 90px;
+      }
+
+      .carrera-card span {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="locopng.png" alt="Logo del Colegio" class="logo-header" />
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="index.html">Inicio</a>
+      <a href="presentacion.html">Campus</a>
+      <a href="carreras.html" class="activo">Carreras</a>
+      <a href="promo.html">Promoción 2025</a>
+      <a href="historia.html">Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="inicio">
+      <h1 class="lema">Nuestras Carreras</h1>
+      <p class="intro">Explora las opciones educativas que ofrecemos para tu futuro profesional:</p>
+
+      <div class="carreras-grid">
+        <a href="informatica.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/informatica.jpg" alt="Informática">
+          </div>
+          <span>Informática</span>
+        </a>
+
+        <a href="robotica.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/robotica.jpg" alt="Robótica">
+          </div>
+          <span>Robótica</span>
+        </a>
+
+        <a href="contaduria.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/contaduria.jpg" alt="Contaduría">
+          </div>
+          <span>Contaduría y Finanzas</span>
+        </a>
+
+        <a href="administracion.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/administracion.jpg" alt="Administración">
+          </div>
+          <span>Administración de Empresas</span>
+        </a>
+
+        <a href="banca.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/banca.jpg" alt="Banca">
+          </div>
+          <span>Banca y Finanzas</span>
+        </a>
+
+        <a href="maritimo.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/maritimo.jpg" alt="Marítimo">
+          </div>
+          <span>Marítimo Portuario</span>
+        </a>
+
+        <a href="construcciones.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/construccion.jpg" alt="Construcción">
+          </div>
+          <span>Construcciones Metálicas</span>
+        </a>
+
+        <a href="humanidades.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/ciencias.jpg" alt="Ciencias">
+          </div>
+          <span>Ciencias y Humanidades</span>
+        </a>
+
+        <a href="hoeteleria.html" class="carrera-card">
+          <div class="image-container">
+            <img src="imagenes/carreras/hoteleria.jpg" alt="Hotelería">
+          </div>
+          <span>Hotelería y Turismo</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('activo');
+    }
+    
+    // Cerrar menú al hacer clic en un enlace (útil en móviles)
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('menu').classList.remove('activo');
+      });
+    });
+
+    // Manejo de errores en imágenes
+    document.querySelectorAll('.image-container img').forEach(img => {
+      img.addEventListener('error', function() {
+        this.style.display = 'none';
+        const icon = document.createElement('div');
+        icon.className = 'placeholder-icon';
+        // Asignar un icono según la carrera (usando el alt de la imagen)
+        const altText = this.alt.toLowerCase();
+        if (altText.includes('informática')) {
+          icon.textContent = '💻';
+        } else if (altText.includes('robótica')) {
+          icon.textContent = '🤖';
+        } else if (altText.includes('contaduría')) {
+          icon.textContent = '📊';
+        } else if (altText.includes('administración')) {
+          icon.textContent = '📈';
+        } else if (altText.includes('banca')) {
+          icon.textContent = '💰';
+        } else if (altText.includes('marítimo')) {
+          icon.textContent = '🚢';
+        } else if (altText.includes('construcción')) {
+          icon.textContent = '🔧';
+        } else if (altText.includes('ciencias')) {
+          icon.textContent = '🔬';
+        } else if (altText.includes('hotelería')) {
+          icon.textContent = '🏨';
+        } else {
+          icon.textContent = '📚'; // Icono por defecto
+        }
+        this.parentNode.appendChild(icon);
+      });
+    });
+  </script>
+
+</body>
+</html>
