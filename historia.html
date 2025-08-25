@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FDR - Historia</title>
+  <link rel="icon" href="locopng.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7fc;
+      color: #1e1e1e;
+    }
+
+    header {
+      background-color: #a78bfa;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-header {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0f172a;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #c4b5fd;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #a78bfa;
+        display: none;
+      }
+
+      nav.activo {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 20px;
+        border-top: 1px solid #c4b5fd;
+      }
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .lema {
+      text-align: center;
+      font-size: 32px;
+      color: #6d28d9;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .historia-contenido h2 {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #6d28d9;
+      border-left: 4px solid #c084fc;
+      padding-left: 12px;
+    }
+
+    .historia-contenido p {
+      text-align: justify;
+      margin-bottom: 18px;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .historia-imagen, .historia-imagen-derecha {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 15px auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .historia-imagen:hover, .historia-imagen-derecha:hover {
+      transform: scale(1.05);
+    }
+
+    .bloque-resaltado {
+      background-color: #f3e8ff;
+      border-left: 4px solid #c084fc;
+      padding: 12px 18px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 600px) {
+      .lema {
+        font-size: 24px;
+      }
+
+      .historia-contenido h2 {
+        font-size: 20px;
+      }
+
+      .historia-contenido p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="locopng.png" alt="Logo del Colegio" class="logo-header" />
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="index.html">Inicio</a>
+      <a href="presentacion.html">Campus</a>
+      <a href="carreras.html">Carreras</a>
+      <a href="promo.html">Promoción 2025</a>
+      <a href="historia.html" class="activo">Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="historia-contenido">
+      <h1 class="lema">Historia - CEMG Franklin Delano Roosevelt</h1>
+
+      <h2>Fundación del Instituto</h2>
+      <p>
+        <img src="historia.jpg" alt="Fundación del Instituto" class="historia-imagen">
+        Después de varios intentos por crear un Instituto de Educación Media, un grupo de personas de la comunidad, apoyados por la Logia Masónica y el Club Rotario, se constituyó en Sociedad de Padres de Familia con el objetivo primordial de fundar el instituto.
+      </p>
+
+      <div class="bloque-resaltado">
+        <p><strong>Integrantes de la Sociedad de Padres de Familia:</strong></p>
+        <ul>
+          <li>Br. Alberto Carias Quiroz – Presidente</li>
+          <li>Dr. Jacobo Núñez Hércules – Vicepresidente</li>
+          <li>Coronel José Urbizo – Secretario</li>
+          <li>Sr. Rafael Prince – Tesorero</li>
+          <li>Doña Catalina Castillo – Vocal No. 1</li>
+          <li>Don Salomón Castellón – Vocal No. 2</li>
+          <li>Profesora Rosa Estrada – Vocal No. 3</li>
+          <li>Profesor Tobías Valencia – Vocal No. 4</li>
+          <li>Don José Dolores Cubero – Vocal No. 5</li>
+        </ul>
+      </div>
+
+      <h2>Autorización Oficial</h2>
+      <p>Mediante el Acuerdo No. 1030, fechado el 26 de junio de 1945 en el Palacio Nacional de Tegucigalpa, se autorizó el funcionamiento del Instituto Normal Franklin Delano Roosevelt en Puerto Cortés.</p>
+
+      <div class="bloque-resaltado">
+        <p><strong>Carreras iniciales autorizadas:</strong></p>
+        <ul>
+          <li>Bachiller en Ciencias y Letras</li>
+          <li>Maestro en Enseñanza Primaria Urbana</li>
+          <li>Perito Mercantil y Contador Público</li>
+        </ul>
+      </div>
+
+      <h2>Ubicaciones del Instituto</h2>
+      <p>
+        El instituto funcionó inicialmente en el edificio de la Logia Morazánica, luego en los bajos de la Comandancia de Armas, después en el pabellón de la alegría del Hotel Palmera, y más tarde en “la famosa mulera”. Finalmente, se trasladó a modernas instalaciones con enfoque técnico-pedagógico.
+      </p>
+
+      <h2>Origen del Nombre</h2>
+      <p>Aunque no se sabe con certeza por qué se eligió el nombre Franklin D. Roosevelt, se mencionan dos versiones:</p>
+      <ol>
+        <li>Un organizador de origen norteamericano ayudó significativamente en la apertura, y se quiso honrar su gesto nombrando el instituto en honor a un compatriota.</li>
+        <li>Admiración por Franklin D. Roosevelt, único presidente de EE. UU. que gobernó cuatro periodos (1933–1945), luchando por la democracia y la libertad mundial.</li>
+      </ol>
+
+      <h2>Legado</h2>
+      <p>Más allá del nombre, lo importante es el orgullo y amor que sienten los egresados, el personal laboral, los padres de familia y el pueblo en general por el instituto, símbolo de sabiduría y educación en la comunidad.</p>
+    </section>
+  </main>
+
+    <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('activo');
+    }
+  </script>
+
+</body>
+</html>

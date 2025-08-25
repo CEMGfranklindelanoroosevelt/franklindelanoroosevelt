@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FDR - Ubicación</title>
+  <link rel="icon" href="locopng.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7fc;
+      color: #1e1e1e;
+    }
+
+    header {
+      background-color: #a78bfa;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-header {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0f172a;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #c4b5fd;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #a78bfa;
+        display: none;
+      }
+
+      nav.activo {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 20px;
+        border-top: 1px solid #c4b5fd;
+      }
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .lema {
+      text-align: center;
+      font-size: 32px;
+      color: #6d28d9;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .ubicacion-info {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .ubicacion-info p {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .ubicacion-info p:first-child {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .videoinicio {
+      display: flex;
+      justify-content: center;
+    }
+
+    .videoinicio iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .lema {
+        font-size: 24px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .ubicacion-info p {
+        font-size: 14px;
+      }
+
+      .videoinicio iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="locopng.png" alt="Logo del Colegio" class="logo-header" />
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="index.html">Inicio</a>
+      <a href="presentacion.html">Campus</a>
+      <a href="carreras.html">Carreras</a>
+      <a href="promo.html">Promoción 2025</a>
+      <a href="ubicanos.html" class="activo">Ubicación</a>
+      <a href="historia.html">Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="inicio">
+      <h1 class="lema">¿Dónde estamos ubicados?</h1>
+      <p class="intro">Puedes encontrarnos en la siguiente dirección. Estamos disponibles para brindarte información en persona de lunes a viernes.</p>
+
+      <div class="ubicacion-info">
+        <p>📍 Dirección: Barrio El Porvenir, Puerto Cortés, Honduras</p>
+        <p>Horario: Lunes a Viernes de 7:00 AM a 12:30 PM y de 12:30 PM a 5:30 PM</p>
+      </div>
+
+      <div class="videoinicio">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.8028156361106!2d-87.93376399223212!3d15.818134518063182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f67b4804ba4a4d1%3A0xd613e9ebf0ad311a!2sFranklin%20Delano%20Roosevelt!5e0!3m2!1ses-419!2shn!4v1754368263995!5m2!1ses-419!2shn" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('activo');
+    }
+  </script>
+
+</body>
+</html>

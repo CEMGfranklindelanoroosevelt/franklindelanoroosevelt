@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FDR - Promoción 2025</title>
+  <link rel="icon" href="locopng.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7fc;
+      color: #1e1e1e;
+    }
+
+    header {
+      background-color: #a78bfa;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-header {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      color: #0f172a;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #c4b5fd;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #a78bfa;
+        display: none;
+      }
+
+      nav.activo {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 20px;
+        border-top: 1px solid #c4b5fd;
+      }
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .promo .titulo {
+      text-align: center;
+      font-size: 36px;
+      color: #6d28d9;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .alumnos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+    }
+
+    .alumno {
+      background: linear-gradient(to bottom, #f3e8ff, #fafafa);
+      border: 2px solid #c084fc;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .alumno:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .alumno img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      border: 3px solid #a78bfa;
+    }
+
+    .alumno h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #6d28d9;
+      margin-bottom: 6px;
+    }
+
+    .alumno .frase {
+      font-size: 0.75rem;
+      font-style: italic;
+      color: #444;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 600px) {
+      .promo .titulo {
+        font-size: 24px;
+      }
+
+      .alumno img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .alumno h3 {
+        font-size: 0.75rem;
+      }
+
+      .alumno .frase {
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="locopng.png" alt="Logo del Colegio" class="logo-header" />
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="index.html">Inicio</a>
+      <a href="presentacion.html">Campus</a>
+      <a href="carreras.html">Carreras</a>
+      <a href="promo.html" class="activo">Promoción 2025</a>
+      <a href="historia.html">Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="promo">
+      <h1 class="titulo">Promoción 2025</h1>
+      <div class="alumnos">
+  <div class="alumno">
+  <img src="ada.jpg" alt="Alumno 1">
+  <h3>1. ADA BELEN GARCIA BONILLA</h3>
+  <p class="frase">"El esfuerzo de ayer es el triunfo de hoy"</p>
+</div>
+<div class="alumno">
+  <img src="alisonf.jpg" alt="Alumno 2">
+  <h3>2. ALISSON ANAHI FIGUEROA ALBARADO</h3>
+   <p class="frase">"El futuro pertenece a aquellos que creen en la belleza de sus sueños."
+</p>
+</div>
+<div class="alumno">
+  <img src="alisonc.jpg" alt="Alumno 3">
+  <h3>3. ALLISON ANDREA CRUZ GARCIA</h3>
+  <p class="frase">"El éxito no es la clave de la felicidad. La felicidad es la clave del éxito."
+</p></div>
+<div class="alumno">
+  <img src="alma.jpg" alt="Alumno 4">
+  <h3>4. ALMA YOSELIN GARCIA AGUILAR</h3>
+  <p class="frase">"No es el final, es el comienzo de algo extraordinario."
+</p></div>
+<div class="alumno">
+  <img src="andrea.jpg" alt="Alumno 5">
+  <h3>5. ANDREA JOELLY MADRID DURON</h3>
+  <p class="frase">"La educación es el pasaporte hacia el futuro."
+</p></div>
+<div class="alumno">
+  <img src="¡RAMON!.jpg" alt="Alumno 6">
+  <h3>6. ANDREA JOVITA FUNEZ PAVON</h3>
+  <p class="frase">"Hoy cerramos un capítulo para comenzar uno aún más brillante."
+</p></div>
+<div class="alumno">
+  <img src="bessy.jpg" alt="Alumno 7">
+  <h3>7. BESSY ABIGAIL SORIANO MAYORGA</h3>
+  <p class="frase">"El esfuerzo de hoy es el éxito de mañana."
+</p></div>
+<div class="alumno">
+  <img src="claudeth.jpg" alt="Alumno 8">
+  <h3>8. CLAUDETH ALEJANDRA HERNANDEZ NUÑEZ</h3>
+  <p class="frase">"Los obstáculos no deben detenerte. Si encuentras un muro, no te des por vencido."</p></div>
+<div class="alumno">
+  <img src="damaris.jpg" alt="Alumno 9">
+  <h3>9. DAMARIS ALEXANDRA SOTO CRUZ</h3>
+  <p class="frase">"Cada logro comenzó con la decisión de intentarlo."
+</p></div>
+<div class="alumno">
+  <img src="darlyn.jpg" alt="Alumno 10">
+  <h3>10. DARLYN YAMILETH ORELLANA LOPEZ</h3>
+  <p class="frase">"La perseverancia es el camino al éxito."
+</p></div>
+<div class="alumno">
+  <img src="dilia.jpg" alt="Alumno 11">
+  <h3>11. DILIA FERNANDEZ MEDINA</h3>
+  <p class="frase">"Detrás de cada graduado hay una historia de esfuerzo y dedicación."
+</p></div>
+<div class="alumno">
+  <img src="eliani.jpg" alt="Alumno 12">
+  <h3>12. ELIANI VALERIA CLAROS QUINTANO</h3>
+  <p class="frase">"Hoy termina una etapa, pero comienza el verdadero camino hacia mis sueños."</p></div>
+<div class="alumno">
+  <img src="genesis.jpg" alt="Alumno 13">
+  <h3>13. GENESIS ANAHI ORELLANA GARCIA</h3>
+  <p class="frase">"El mejor modo de predecir el futuro es creándolo."
+</p></div>
+<div class="alumno">
+  <img src="glenda.jpg" alt="Alumno 14">
+  <h3>14. GLENDA ELIZABETH SALES GUZMAN</h3>
+  <p class="frase">"Tu tiempo es limitado, no lo malgastes viviendo la vida de otro."
+</p></div>
+<div class="alumno">
+  <img src="heibi.jpg" alt="Alumno 15">
+  <h3>15. HEIBI YOLIVETH ALFARO EBANKS</h3>
+  <p class="frase">"No tengas miedo de renunciar a lo bueno para ir por lo grande."
+</p></div>
+<div class="alumno">
+  <img src="mckenzie.jpg" alt="Alumno 16">
+  <h3>16. HEIDAN NATALY MC KENZIE TALAVERA</h3>
+  <p class="frase">"Si el problema tiene solución, ¿para que te preocupas?, y si no tiene solución , pues ya para que te preocupas"</p></div>
+<div class="alumno">
+  <img src="heydi.jpg" alt="Alumno 17">
+  <h3>17. HEYDI MELECIA MUNGUIA RODRIGUEZ</h3>
+  <p class="frase">"El futuro tiene muchos nombres. Para los débiles es lo inalcanzable."
+</p></div>
+<div class="alumno">
+  <img src="joselin.jpg" alt="Alumno 18">
+  <h3>18. JOSSELIN VANESSA PINEDA RAMOS</h3>
+  <p class="frase">"Juntos dejamos huellas que durarán para siempre."</p></div>
+<div class="alumno">
+  <img src="kristy.jpg" alt="Alumno 19">
+  <h3>19. KRISTY NAHOMY GUTIERREZ BARAHONA</h3>
+  <p class="frase">"Sé el cambio que quieres ver en el mundo."</p></div>
+<div class="alumno">
+  <img src="marien.jpg" alt="Alumno 20">
+  <h3>20. MARIEN ANAHI RIVERA RODRIGUEZ</h3>
+  <p class="frase">"El mañana pertenece a aquellos que se preparan para él hoy."
+</p></div>
+<div class="alumno">
+  <img src="marta.jpg" alt="Alumno 21">
+  <h3>21. MARTA MARINA CRUZ VARGAS</h3>
+  <p class="frase">"Vuela alto, sueña en grande y alcanza las estrellas."
+</p></div>
+<div class="alumno">
+  <img src="merly.jpg" alt="Alumno 22">
+  <h3>22. MERLYN JANETH NAVARRO BUESO</h3>
+  <p class="frase">"El único límite para nuestros logros de mañana serán nuestras dudas de hoy."
+</p></div>
+<div class="alumno">
+  <img src="rosa.jpg" alt="Alumno 23">
+  <h3>23. ROSA ADILIA ESPINAL MONDRAGON</h3>
+  <p class="frase">"No dejes que el ruido de las opiniones de los demás ahogue tu voz interior."
+</p></div>
+<div class="alumno">
+  <img src="sulmi.jpg" alt="Alumno 24">
+  <h3>24. SULMI VANESSA RODRIGUEZ MARTINEZ</h3>
+  <p class="frase">"la mitad del año no hice nada, la otra mitad fue salvarlo"</p></div>
+<div class="alumno">
+  <img src="yaritza.jpg" alt="Alumno 25">
+  <h3>25. YARITSA SARAHI VELASQUEZ RAMOS</h3>
+  <p class="frase">"La inteligencia casi me alcanza, pero fui más rápido"</p></div>
+<div class="alumno">
+  <img src="abner.jpg" alt="Alumno 26">
+  <h3>26. ABNER JESE ZALDIVAR CABALLERO</h3>
+  <p class="frase">"El conocimiento es poder, pero el entusiasmo mueve el mundo."
+</p></div>
+<div class="alumno">
+  <img src="ashton.jpg" alt="Alumno 27">
+  <h3>27. ASHTON JULIEN ORDOÑEZ ULLOA</h3>
+  <p class="frase">"Cree que puedes y ya estarás a medio camino."
+</p></div>
+<div class="alumno">
+  <img src="david.jpg" alt="Alumno 28">
+  <h3>28. DAVID ALEJANDRO MARTELL PADILLA</h3>
+  <p class="frase">"Si puedes imaginarlo, puedes programarlo"</p></div>
+<div class="alumno">
+  <img src="hefer.jpg" alt="Alumno 29">
+  <h3>29. HEFER MEDINA ESCOBAR</h3>
+  <p class="frase">"La graduación no es el final, es el comienzo del aprendizaje permanente."
+</p></div>
+<div class="alumno">
+  <img src="jaredu.jpg" alt="Alumno 30">
+  <h3>30. JARED ALBERTO URBINA LEIVA</h3>
+  <p class="frase">"La mente que se abre a una nueva idea jamás volverá a su tamaño original."
+</p></div>
+<div class="alumno">
+  <img src="jaredg.jpg" alt="Alumno 31">
+  <h3>31. JARED ALEJANDRO GAVARRETE LOPEZ</h3>
+  <p class="frase">"La educación es lo que queda después de olvidar lo que se ha aprendido en la escuela."
+</p></div>
+<div class="alumno">
+  <img src="jayson.jpg" alt="Alumno 32">
+  <h3>32. JAYSON JOEL HOWELL MARADIAGA</h3>
+  <p class="frase">"Aprender es como remar contra corriente: en cuanto se deja, se retrocede."
+</p></div>
+<div class="alumno">
+  <img src="jeferson.jpg" alt="Alumno 33">
+  <h3>33. JEFFERSON NAHUN BENNETT GUERRERO</h3>
+  <p class="frase">"Naci por mi madre morire por mis estudios"</p></div>
+<div class="alumno">
+  <img src="jery.jpg" alt="Alumno 34">
+  <h3>34. JERY JAHEL CABALLERO VARGAS</h3>
+  <p class="frase">"El aprendizaje es un tesoro que seguirá a su dueño everywhere."</p></div>
+  <div class="alumno">
+  <img src="job.jpg" alt="Alumno 35">
+  <h3>35. JOB ANTONIO CRUZ FUNES</h3>
+  <p class="frase">"No me arrepiento de lo que he hecho, sino de lo que no hice cuando tenía la oportunidad."
+</p></div>
+  <div class="alumno">
+  <img src="luis.jpg" alt="Alumno 36">
+  <h3>36. LUIS DAVID ARGUETA ERAZO</h3>
+  <p class="frase">"El mayor riesgo es no correr ningún riesgo."
+</p></div>
+  <div class="alumno">
+  <img src="orlin.jpg" alt="Alumno 37">
+  <h3>37. ORLIN GUALBERTO LUNA BENITEZ</h3>
+  <p class="frase">"Sé el cambio que quieres ver en el mundo."
+</p></div>
+  <div class="alumno">
+  <img src="oscar.jpg" alt="Alumno 38">
+  <h3>38. OSCAR DAVID MILLA HERNANDEZ</h3>
+  <p class="frase">"La vida es 10% lo que me ocurre y 90% cómo reacciono a ello."
+</p></div>
+  
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('activo');
+    }
+  </script>
+
+</body>
+</html>
